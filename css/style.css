@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 85% 15%;
+  grid-template-columns: 20% 1fr;
+  grid-template-areas: "aside catalogo" "footer footer";
+  background-color: #333232;
+  background-image: linear-gradient(0deg, #333232 0%, #0d3f4e 82%);
+  height: 100vh;
+}
+
+.menu-lateral {
+  grid-area: aside;
+}
+.menu-lateral a.nav-link {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.catalogo {
+  grid-area: catalogo;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/*# sourceMappingURL=style.css.map */
