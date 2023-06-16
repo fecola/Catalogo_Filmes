@@ -16,10 +16,9 @@ function MontarMenuCategorias() {
 
     fetch(urlBaseApi + 'genre/movie/list?language=en', options)
         .then(response => response.json())
-    
-        .then(data => {
-    
-            console.log(data);
+        
+        .then(data => {    
+            console.table(data);
     
             let categoria = document.createElement('ul');
             categoria.setAttribute("class", "dropdown-menu");
@@ -28,9 +27,12 @@ function MontarMenuCategorias() {
             data.genres.forEach(element => {
                 let liCategoria = document.createElement('li');
                 let item = document.createElement('a');
-                
+
+                item.setAttribute("value", element.id);
                 item.setAttribute("class", "dropdown-item");
+                item.setAttribute("onclick", "FilmesDaCategoria(this.getAttribute('value'))");
                 item.innerText = element.name;
+
                 
                 liCategoria.appendChild(item);
                 categoria.appendChild(liCategoria);
@@ -41,6 +43,28 @@ function MontarMenuCategorias() {
     
         .catch(err => console.log(err));
 
+}
+
+
+
+function FilmesDaCategoria(idCategoria) {
+    fetch(urlBaseApi + 'discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres='+idCategoria, options)
+        .then(response => response.json())
+        
+        .then(data => {    
+            console.log(data);
+            const listaFilmes = document.getElementsByClassName('filmes');
+
+            let card = document.createElement('div');
+            card.setAttribute('class', 'card');
+
+            let cardBody = document.createElement('div');
+            cardBody.setAttribute('class', 'card-body');
+    
+            
+        }).catch(err => console.log(err))
+    
+        .catch(err => console.log(err));
 }
 
 

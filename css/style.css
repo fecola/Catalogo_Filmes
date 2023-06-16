@@ -26,6 +26,10 @@ body {
 .catalogo {
   grid-area: catalogo;
 }
+.catalogo .filmes {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .footer {
   grid-area: footer;

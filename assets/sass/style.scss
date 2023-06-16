@@ -30,6 +30,11 @@ body {
 
 .catalogo {
     grid-area: catalogo;
+
+    .filmes {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .footer {
