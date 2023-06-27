@@ -73,7 +73,7 @@ function FilmesDaCategoria(idCategoria) {
 
                 let imgPoster = document.createElement('img');
                 imgPoster.setAttribute('class', 'img-fluid rounded-start');
-                // imgPoster.setAttribute('src', element.poster_path);
+                imgPoster.setAttribute('src', 'https://image.tmdb.org/t/p/original/' + element.poster_path);
                 subCard1_1.appendChild(imgPoster);
 
                 let subCard1_2 = document.createElement('div');
