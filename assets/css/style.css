@@ -5,13 +5,19 @@
 }
 
 body {
+  background-color: #333232;
+  background-image: linear-gradient(0deg, #333232 0%, #0d3f4e 82%);
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
   display: grid;
   grid-template-rows: 85% 15%;
   grid-template-columns: 20% 1fr;
   grid-template-areas: "aside catalogo" "footer footer";
-  background-color: #333232;
-  background-image: linear-gradient(0deg, #333232 0%, #0d3f4e 82%);
-  height: 100vh;
 }
 
 .menu-lateral {
